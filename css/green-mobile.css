@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+html {
+    font-size: 15px;
+}
+
+/* 공통 */
+section+section {
+    padding: 3.33rem 0;
+    /* 50px */
+}
+
+section h2 {
+    font-size: 1.867rem;
+    /* 28px */
+    margin-bottom: 2rem;
+}
+
+section .text {
+    font-size: 1rem;
+    margin-bottom: 1.667rem;
+    /* 25px */
+}
+
+section .btn {
+    padding: 0.75rem 2rem;
+    /* 12px 30px */
+    font-size: 1.067rem;
+    /* 16px */
+}
+
+section .btn::before {
+    display: none;
+}
+
+.btn-area {
+    text-align: center;
+}
+
+/* header */
+header .logo {
+    position: relative;
+    z-index: 11;
+}
+
+header .logo a {
+    width: 180px;
+    height: 40px;
+}
+
+header .btn-mobile {
+    position: absolute;
+    top: 50%;
+    right: 2.5%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 24px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+header .btn-mobile span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+header .btn-mobile span:nth-child(1) {
+    top: 0;
+}
+
+header .btn-mobile span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header .btn-mobile span:nth-child(3) {
+    bottom: 0;
+}
+
+/* 클릭 후 x모양 */
+header .btn-mobile.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+header .btn-mobile.active span:nth-child(2) {
+    opacity: 0;
+}
+
+header .btn-mobile.active span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+/* header gnb area */
+.gnb-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #56a278;
+    z-index: 10;
+    display: none;
+}
+
+.gnb-area .gnb {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+}
+
+/* main-visual */
+#main-visual {
+    height: 50vh;
+    background-position: right center;
+}
+
+#main-visual .inner {
+    height: 100%;
+    justify-content: center;
+}
+
+.main-title .slogan {
+    font-size: 2.133rem;
+    text-align: center;
+}
+
+.main-title .sub-text {
+    font-size: 1.2rem;
+}
+
+/* intro */
+#sec-intro .inner {
+    display: block;
+}
+
+#sec-intro .intro-pic {
+    margin-bottom: 25px;
+}
+
+#sec-intro h2 {
+    text-align: center;
+    font-size: 2.133rem;
+    margin-bottom: 1.875rem;
+}
+
+#sec-intro .text-area strong {
+    font-size: 22px;
+    text-align: center;
+}
+
+#sec-intro .text-area .text {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* 추천메뉴 */
+.swiper.recom-swiper {
+    padding: 0 0 30px;
+    /* 스와이퍼 밑에 있는 인디케이터 영역 확보를 위해서 필요함 */
+}
+
+.recom-list li:hover {
+    transform: translateY(0);
+}
+
+.recom-list li:hover figure {
+    transform: none;
+}
+
+/* event area */
+#sec-event {
+    position: relative;
+    height: 25vh;
+    background-position: left center;
+}
+
+#sec-event::before {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #56a278c4, transparent);
+    content: '';
+}
+
+#sec-event .inner .event-text {
+    width: 100%;
+    text-align: left;
+}
+
+.event-text h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.event-text h2 span {
+    display: block;
+}
+
+/* review-area */
+#review-area .review-list {
+    display: block;
+}
+
+#review-area .review-list li {
+    margin-bottom: 15px;
+}
+
+.review-list li a::before {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.review-list .review-text-group {
+    padding: 30px;
+    width: 100%;
+}
+
+/* footer */
+footer .inner {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer img {
+    margin-bottom: 20px;
+}
